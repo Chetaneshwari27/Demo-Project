@@ -1,7 +1,5 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { RootState } from '../store/store';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { AppBar, Toolbar, IconButton, Typography, Button } from '@mui/material';
 

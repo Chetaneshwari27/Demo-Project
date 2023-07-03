@@ -41,7 +41,7 @@ const StyledForm = styled('form')({
 const StyledButton = styled(Button)({
   width: '150px',
   fontFamily: "'Caveat', cursive",
-  backgroundColor:"salmon",
+  backgroundColor: "salmon",
 });
 
 interface LoginFormProps {
@@ -83,7 +83,14 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
         onLogin();
         toast.success('Login successfully');
         navigate('/home');
-      } else {
+      } 
+      else if(registrationData && 
+        formData.username === registrationData.username &&
+        formData.password !== registrationData.password){
+          toast.info('Wrong password')
+          navigate('/login')
+        }
+      else {
         toast.error('Invalid username or password');
         navigate('/register');
       }
@@ -91,13 +98,13 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
       console.log('Login failed:', error);
     }
   };
-  const handleRegister=()=>{
+  const handleRegister = () => {
     navigate('/register')
   }
 
   return (
     <StyledContainer>
-<Navbar>
+      <Navbar>
         <FastfoodIcon />
       </Navbar>
       <h1 style={{ fontWeight: 'bold', textShadow: '2px 2px grey' }}>
@@ -118,7 +125,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
           Login
         </StyledButton>
         <StyledTypography variant='h5'>New to my Recipes</StyledTypography>
-        <StyledButton onClick={handleRegister} style={{color:"white"}}>Register now</StyledButton>
+        <StyledButton onClick={handleRegister} style={{ color: "white" }}>Register now</StyledButton>
       </StyledForm>
     </StyledContainer>
   );

@@ -260,7 +260,6 @@ const DishPage: React.FC<DishPageProps> = ({ onLogout }) => {
             </Grid>
           ))}
         </Grid>
-
       </div>
     </div>
   );
