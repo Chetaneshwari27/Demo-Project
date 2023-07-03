@@ -1,25 +1,3 @@
-// const recipes = [
-//     {
-//       id: 1,
-//       title: 'Recipe 1',
-//       image: 'recipe1.jpg',
-//       description: 'Description of Recipe 1',
-//       ingredients: 'Ingredients for Recipe 1',
-//       instructions: 'Instructions for Recipe 1',
-//     },
-//     {
-//       id: 2,
-//       title: 'Recipe 2',
-//       image: 'recipe2.jpg',
-//       description: 'Description of Recipe 2',
-//       ingredients: 'Ingredients for Recipe 2',
-//       instructions: 'Instructions for Recipe 2',
-//     },
-//     // Add more recipes as needed
-//   ];
-  
-//   export default recipes;  
-
 export const dishesData = [
   {
     name: 'Dish 1',
